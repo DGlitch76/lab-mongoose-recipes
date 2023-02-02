@@ -59,8 +59,8 @@ mongoose
 
 //Iteration 3
 Recipe.insertMany(data)
-  .then((allRecipes) => {
-    console.log("recipes inserted in db", allRecipes);
+  .then((data) => {
+    console.log("recipes inserted in db",data);
   })
   .catch(error => {
     console.error('Error - No recipes inserted in database', error);
@@ -82,4 +82,13 @@ Recipe.insertMany(data)
   })
   .catch(error => {
     console.error('Error - No recipe was deleted', error);
-  });
+  })
+  
+  .finally(()=>{
+    mongoose.connection.close()
+ });
+
+
+  // .catch(error => {
+  //   console.error('Error - No recipe was deleted', error);
+  // });
