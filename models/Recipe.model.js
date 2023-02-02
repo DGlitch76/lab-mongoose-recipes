@@ -38,6 +38,22 @@ const recipeSchema = new Schema({
 
 });
 
+// const recipe = {
+//   // TODO: write the schema
+
+//   title: "Recipe Test",
+//   level: 'Easy Peasy',
+//   ingredients:["Arroz", "Pato", ],
+//   cuisine: "Portuguese",
+//   dishType:"Roast",
+//   image:"https://images.media-allrecipes.com/images/75131.jpg",
+//   duration: 70,
+//   created: {
+//   type: Date,
+//   default: Date.now,
+
+// }};
+
 // console.log(recipeSchema);
  
 const Recipe = mongoose.model('Recipe', recipeSchema);
